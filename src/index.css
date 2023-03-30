@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Montserrat";
+  background-image: linear-gradient(to bottom left,#338dff 15%,#2913b6);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eeeeee;
+  height: 8px;
+}
+
+progress::-webkit-progress-value {
+  background: #338dff;
+}
