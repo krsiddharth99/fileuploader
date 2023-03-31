@@ -1,3 +1,21 @@
+# Small Application for Uploading MP4 file to S3 Bucket on AWS Cloud
+
+## Screenshots
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/krsiddharth99/fileuploader/blob/main/src/3.png" alt="1"/>
+    </td>
+    <td>
+      <img src="https://github.com/krsiddharth99/fileuploader/blob/main/src/1.png" alt="1"/>
+    </td>
+    <td>
+      <img src="https://github.com/krsiddharth99/fileuploader/blob/main/src/2.png" alt="1"/>
+    </td>
+  </tr>
+</table>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
