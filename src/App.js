@@ -14,7 +14,7 @@ function App() {
     const file = event.target.files[0];
     const fsize = Math.round(file?.size / 1024);
     if (file && file.type === "video/mp4") {
-      if (fsize >= 20000 && fsize <= 1024000) {
+      if (fsize >= 50000 && fsize <= 1024000) {
         setSelectedFile(file);
         setUploading(true);
         uploadFile(file);
