@@ -29,7 +29,7 @@ function App() {
   };
 
   const handleDrop = (event) => {
-    if(showPlayer) return
+    if (showPlayer) return;
     event.preventDefault();
     const file = event.dataTransfer.files[0];
     if (file && file?.type === "video/mp4") {
@@ -133,31 +133,29 @@ function App() {
               {/* <i class="fa-solid fa-play"></i> */}
               <i className="fa-solid fa-play "></i>
             </div>
-            <div className="relative my-4 md:py-0 px-6 w-full flex flex-col justify-center items-start">
-              <p className="pb-1 items-center flex">
-                <span className="text-sm font-medium text-gray-400">
-                  File&nbsp;&nbsp;
-                </span>
-                <span className="text-gray-500 font-semibold text-sm w-[40%] overflow-hidden inline-block truncate">
-                  {selectedFile?.name}
-                </span>
-                <span
-                  className={`text-sm font-medium text-gray-400 ${
-                    progress === 100 ? "text-green-600" : "text-red-700"
-                  }`}
-                >
-                  &nbsp;&nbsp;
-                  {progress === 100 ? "Completed" : "is uploading..."}
-                </span>
-              </p>
-              <progress
-                className="w-full"
-                value={progress}
-                max={100}
-              ></progress>
+            <div className="relative w-full">
+              <div className="my-4 md:py-0 px-6 flex flex-col justify-center items-start">
+                <p className="pb-1 flex">
+                  <span className="text-sm font-medium text-gray-400 ">
+                    File&nbsp;&nbsp;
+                  </span>
+                  <span className="text-gray-500 font-semibold text-sm w-[100px] truncate">
+                    {selectedFile?.name}
+                  </span>
+                  <span
+                    className={`text-sm font-medium text-gray-400 ${
+                      progress === 100 ? "text-green-600" : "text-red-700"
+                    }`}
+                  >
+                    &nbsp;&nbsp;
+                    {progress === 100 ? "Completed" : "is uploading..."}
+                  </span>
+                </p>
+                <progress className="w-full" value={progress} max={100}></progress>
+              </div>
               <button
                 onClick={handleCancel}
-                className="absolute -right-3 -top-6 hover:bg-[#3c9dffe3] transition-all duration-500 bg-[#3c9eff] text-white rounded-full px-[9px] py-[7px] text-xs flex items-center"
+                className="absolute -right-3 -top-3 hover:bg-[#3c9dffe3] transition-all duration-500 bg-[#3c9eff] text-white rounded-full px-[9px] py-[7px] text-xs flex items-center"
               >
                 <i className="fa-solid fa-xmark"></i>
               </button>
